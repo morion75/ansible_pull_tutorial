@@ -1,11 +1,12 @@
-- hosts: localhost
+- host: localhost
   connection: local
   become: true
 
+  pre_tasks:
+    - name: update repositories
+      dnf:
+        update_cache: yes
+      changed_when: false
+
   tasks:
-  - name: Install packages
-    dnf:
-      name:
-        - htop
-        - mc
-        - tmux
+    - include: tasks/packages.yml
