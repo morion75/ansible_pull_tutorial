@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  becom: true
+  become: true
 
   tasks:
   - name: Install htop
