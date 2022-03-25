@@ -5,4 +5,4 @@
   tasks:
   - name: Install htop
     dnf:
-      name htop
+      name: htop
